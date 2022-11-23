@@ -11,15 +11,7 @@
     </nav>
     <section class='list'>
 <?php
-        // date_order	
-// time_order	
-// qty_product	
-// username_cus	
-// id_product	
-// payment_status
-
-// UPDATE `po` SET `payment_status` = 'TT' WHERE `po`.`date_order` = '2022-10-10' AND `po`.`time_order` = '15:55:55' AND `po`.`qty_product` = 1 AND `po`.`username_cus` = 'jenniekim' AND `po`.`id_product` = 1;
-
+       
     $stmt = $pdo->prepare("UPDATE po SET payment_status=? WHERE date_order=? AND time_order=?AND qty_product=?  AND username_cus=? AND id_product=?");
      
     $stmt->bindParam(1, $_POST["payment_status"]); 
